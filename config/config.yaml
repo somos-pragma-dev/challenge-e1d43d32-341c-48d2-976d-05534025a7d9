@@ -1,0 +1,7 @@
+# Configuración de la aplicación
+database:
+  driver: sqlite
+  connectionString: test.db
+
+server:
+  port: 8080

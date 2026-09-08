@@ -1,0 +1,48 @@
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "API de Usuarios"
+  description: "API para gestionar usuarios"
+paths:
+  /users/:
+    get:
+      summary: "Obtener todos los usuarios"
+      responses:
+        200:
+          description: "Lista de usuarios"
+    post:
+      summary: "Crear un usuario"
+      responses:
+        201:
+          description: "Usuario creado"
+  /users/{id}:
+    get:
+      summary: "Obtener usuario por ID"
+      responses:
+        200:
+          description: "Usuario encontrado"
+    put:
+      summary: "Actualizar usuario"
+      responses:
+        200:
+          description: "Usuario actualizado"
+    delete:
+      summary: "Eliminar usuario"
+      responses:
+        204:
+          description: "Usuario eliminado"
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      role:
+        type: string
